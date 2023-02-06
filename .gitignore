@@ -1,0 +1,18 @@
+# Diretorios ignorados
+
+.idea/
+venv/
+
+accounts/__pycache__/  
+accounts/migrations/
+
+agenda/__pycache__/ 
+
+
+contatos/__pycache__/  
+contatos/migrations/
+
+# Arquivos ignorados
+
+Notes.txt
+db.sqlite3
