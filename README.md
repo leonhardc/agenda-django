@@ -11,6 +11,7 @@ Olá tudo bem? Este projeto implementa uma agenda de contatos no framework Djang
     - [**Clonando o respositório**](#clonando-o-respositório)
     - [**Configurando o Projeto**](#configurando-o-projeto)
     - [**Instalando as dependencias do projeto**](#instalando-as-dependencias-do-projeto)
+    - [**Inicializando o projeto**](#inicializando-o-projeto)
 
 
 ## **Técnologias utilizadas**
@@ -76,3 +77,57 @@ Proximo passo é instalar as dependencias do nosso projeto. É simples, basta ex
     pip install -r requirements.txt
 ```
 
+### **Inicializando o projeto**
+
+E ai, já podemos começar a usar nossa aplicação? Infelizmente, ainda não. Primeiro temos que fazer algumas configurações iniciais como criar nosso banco de dados, preparando as migrações e aplicando elas. 
+
+Para criar as migrações que precisam ser feitas no nosso banco execute o comando abaixo no seu terminal
+
+```
+    python manage.py makemigrations
+```
+
+Depois de criadas, precisamos aplicar nossas migrações no nosso banco de dados. Para fazer isso execute o comando:
+
+```
+    python manage.py migrate
+```
+
+Depois de feitos os passos anteriores devemos agora startar nosso servidor local antes de acessar a nossa aplicação.
+
+```
+    python manage.py runserver
+```
+
+Se tudo correu bem até aqui você verá uma mensagem parecida com:
+
+```
+    Watching for file changes with StatReloader
+    Performing system checks...
+
+    System check identified no issues (0 silenced).
+    February 06, 2023 - 19:21:06
+    Django version 4.0.6, using settings 'agenda.settings'
+    Starting development server at http://127.0.0.1:8000/
+    Quit the server with CTRL-BREAK.
+```
+
+Para acessar a aplicação digite o endereço `http://127.0.0.1:8000/` na barra de endereço do seu navegador.
+
+Como o cadastro de usuário não foi implementado nesse projeto recomenda-se que você crie um super usuário para acessa a página inicial da aplicação. Para isso digite o seguinte comando no seu terminal e preencha as informações recomendadas. 
+
+```
+    python manage.py createsuperuser
+```
+
+Depois de criado o usuário fique a vontade para logar normalmente na página abaixo
+
+
+![Página de login](./img/login-page.png)
+
+
+A página inicial da aplicação é como mostra na próxima imagem 
+
+![Página Inicial](./img/initial-page.png)
+
+Fique a vontade para brincar, inserir novos contatos, apagá-los e ver como são as páginas de detalhes de cada contato quando adicionamos ou não fotos para eles.
