@@ -131,3 +131,9 @@ A página inicial da aplicação é como mostra na próxima imagem
 ![Página Inicial](./img/initial-page.png)
 
 Fique a vontade para brincar, inserir novos contatos, apagá-los e ver como são as páginas de detalhes de cada contato quando adicionamos ou não fotos para eles.
+
+Abaixo segue um pequeno demostrativo da aplicação
+
+<div>
+    <img src="./img/gif-agenda.gif" width="100%">
+</div>
