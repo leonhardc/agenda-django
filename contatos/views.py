@@ -8,6 +8,7 @@ from django.db.models import Q, Value # Q -> modulo django para fazer consultas 
 from django.db.models.functions import Concat
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from accounts import views
 
 
 @login_required(redirect_field_name='login')
@@ -119,4 +120,4 @@ def busca(request):
 
 
 def url_vazia(request):
-    return render(request, 'empty.html')
+    return redirect("accounts/TelaInicial/")
